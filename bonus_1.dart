@@ -34,7 +34,7 @@ class Center extends Widget {
 }
 
 class Column extends Widget {
-  final Widget children;
+  final List<Widget> children;
 
   Column({required this.children});
 }
@@ -47,14 +47,14 @@ class Text extends Widget {
 
 
 
-final Widget myApp = MaterialApp(
+Widget myApp = MaterialApp(
   home: Scaffold(
     body: Center(
       child: Column(
-        children:
+        children: [
           Text("Hallo"),
           Text("Welt"),
-        ),
+        ]),
       ),
     ),
   );
